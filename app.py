@@ -88,6 +88,6 @@ st.markdown("""
 }
 </style>
 <div class="footer">
-    <p>Created by <b>Asia Noble</b> - <a href=http://github.com/nnoble13>Github</a> <a href=http://instagram.com/asianobleart>@asianobleart</a> an illustrator who switched to data science so she could complain about AI properly</p>
+    <p>Created by <b>Asia Noble</b> 👩🏽‍💻 <a href=http://github.com/nnoble13>Github</a> 📸 <a href=http://instagram.com/asianobleart>@asianobleart</a> <br>an illustrator who switched to data science so she could complain about AI properly</p>
 </div>
 """, unsafe_allow_html=True)
