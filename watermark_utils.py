@@ -19,6 +19,7 @@ def get_contrasting_color(image, position = (50,50), font_scale=1, thickness=2):
         return (0, 0, 0) # this is black, you can change the colors just use the diff codes for RGB between 0 to 255
     else:
         return (255, 255, 255)
+
 def get_optimal_font_scale(text, width, font=cv2.FONT_HERSHEY_SIMPLEX, thickness=2):
     for scale in reversed(range(1, 100)):
         font_scale = scale / 10.0
@@ -29,6 +30,7 @@ def get_optimal_font_scale(text, width, font=cv2.FONT_HERSHEY_SIMPLEX, thickness
 
 def add_transparent_text(image, text, font=cv2.FONT_HERSHEY_SIMPLEX, thickness=2, alpha=0.35):
     h, w = image.shape[:2]
+    thickness = max(1, int(min(w, h) / 400))
     font_scale = get_optimal_font_scale(text, int(w * 0.98), font, thickness)  # 98% of width
     (text_width, text_height), baseline = cv2.getTextSize(text, font, font_scale, thickness)
     x = max(0, (w - text_width) // 2)

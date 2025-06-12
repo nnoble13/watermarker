@@ -6,7 +6,9 @@ from PIL import Image
 from io import BytesIO
 from watermark_utils import add_transparent_text
 
-st.title("Batch Image Watermarking Tool")
+st.title("Sick of Stolen Art")
+st.subheader("💅🏽 Free Batch Image Watermarking Tool 💦")
+st.markdown("""Watermark your images with a transparent text overlay with this free tool.""")
 
 # Upload images
 uploaded_files = st.file_uploader(
@@ -62,3 +64,30 @@ if st.session_state.confirmed:
     # Optionally, allow user to reset and start over
     if st.button("Start Over"):
         st.session_state.confirmed = False
+
+
+col1, col2 = st.columns(2)
+with col1:
+    st.image('images/myart.png', caption='original art by Asia Noble', use_container_width=True)
+with col2:
+    st.image('images/myart_marked.png', caption='watermarked art', use_container_width=True)
+
+st.markdown("""
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 100;
+}
+</style>
+<div class="footer">
+    <p>Created by <b>Asia Noble</b> - <a href=http://github.com/nnoble13">Github</a><br>an illustrator who switched to data science so she could complain about AI properly</p>
+</div>
+""", unsafe_allow_html=True)
