@@ -6,9 +6,9 @@ from PIL import Image
 from io import BytesIO
 from watermark_utils import add_transparent_text
 
-st.title("Sick of Stolen Art")
-st.subheader("💅🏽 Free Batch Image Watermarking Tool 💦")
-st.markdown("""Watermark your images with a transparent text overlay with this free tool.""")
+st.title("Sick of Stolen Art?")
+st.subheader("💅🏽 Watermark your images 💦")
+st.markdown("""transparent text overlay with this FREE tool.""")
 
 # Upload images
 uploaded_files = st.file_uploader(
